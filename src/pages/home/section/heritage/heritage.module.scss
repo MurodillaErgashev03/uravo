@@ -1,0 +1,192 @@
+$orange-primary: #e67e22;
+$orange-light: #f39c12;
+$brown-dark: #8b4513;
+$brown-medium: #a0522d;
+$brown-light: #cd853f;
+$cream: #f5f0eb;
+$white: #ffffff;
+$text-dark: #333333;
+$text-muted: #666666;
+
+.section {
+  padding: 80px 130px;
+  background-color: $white;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 48px;
+  line-height: 1.4;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.main {
+  padding: 72px 40px;
+}
+
+.mainCard {
+  border-radius: 5px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin-bottom: 40px;
+  gap: 24px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+.badge {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badgeNumber {
+  background: #f9e8db;
+  color: #d8663a;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.badgeText {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.mainCardContent {
+  flex: 1;
+}
+
+.mainCardDescription {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pricingTable {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 520px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pricingHeader {
+  text-align: center;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 20px;
+
+  &:first-child {
+    background: #f6f6f6;
+  }
+}
+
+.pricingHeaderLight {
+  background: #863126;
+  color: white;
+}
+
+.pricingRow {
+  &:nth-child(even) {
+    background-color: rgba($cream, 0.5);
+  }
+  text-align: center;
+}
+
+.pricingLabel {
+  padding: 12px 16px;
+  font-weight: 600;
+  color: $text-dark;
+  font-size: 20px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricingValue {
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: 600;
+  color: $text-dark;
+  font-size: 20px;
+  background-color: $white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch; // ⭐ cardlarni teng baland qiladi
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ⭐️ CARDLARNI TENG BALAND QILISH UCHUN TO‘G‘RILANGAN KOD ⭐️ */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.featureTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #d8663a;
+  padding: 10px;
+}
+
+.featureNumber {
+  background: #f9e8db;
+  color: #d8663a;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.featureName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.featureCard {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 24px;
+  flex: 1; // ⭐️ ichki cardni balandlikka moslashtiradi
+}
+
+.featureDescription {
+  font-size: 16px;
+}

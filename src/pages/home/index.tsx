@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
-import { CustomButton } from 'src/components/common';
+import BusinessFeatures from './section/heritage';
+import Hero from './section/hero';
+import Issues from './section/Issues';
 
 function Home() {
   return (
-    <div className="container" style={{ paddingTop: 50 }}>
-      <Link to="/help">
-        <CustomButton type="primary">Go to help page</CustomButton>
-      </Link>
+    <div>
+      <Hero />
+      <Issues />
+      <BusinessFeatures />
     </div>
   );
 }
