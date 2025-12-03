@@ -1,0 +1,216 @@
+.container {
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 1.5rem;
+    height: 2px;
+  }
+}
+
+.tableWrapper {
+  display: flex;
+  gap: 1rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.mainTable {
+  flex: 1;
+  border-collapse: collapse;
+  background-color: hsl(var(--card));
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.headerRow {
+  border-radius: 10px 10px 0 0;
+
+  th {
+    background-color: #336e6d;
+    color: white;
+
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid white;
+
+    &:first-child {
+      background-color: hsl(var(--card));
+      color: transparent;
+      border-color: transparent;
+    }
+  }
+}
+
+.dataRow {
+  &:nth-child(even) {
+    background-color: hsl(var(--table-row-alt));
+  }
+
+  td {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    font-size: 20px;
+    color: black;
+
+    &:first-child {
+      background-color: #d9eeeb;
+      font-weight: 500;
+      text-align: center;
+      min-width: 120px;
+      color: #336e6d;
+    }
+  }
+}
+
+.price {
+  font-weight: 600;
+}
+
+.circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.highlightColumn {
+  min-width: 160px;
+  border: 3px solid #4a9c99;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: hsl(var(--card));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.highlightHeader {
+  background-color: #336e6d;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.logo {
+  height: 2rem;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ff7a59;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  .logoIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.highlightCell {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: hsl(var(--foreground));
+  background-color: #4a9c99;
+  border: 3px solid white;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.highlightPrice {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: white;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  font-size: 20px;
+  color: white;
+}
+
+.promo {
+  font-size: 0.75rem;
+  color: hsl(var(--accent-foreground));
+  background-color: hsl(var(--accent));
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.filledCircle {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #4a9c99;
+    border-radius: 50%;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .tableWrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .mainTable th,
+  .mainTable td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .highlightColumn {
+    width: 100%;
+  }
+}

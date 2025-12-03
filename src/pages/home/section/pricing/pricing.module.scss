@@ -1,0 +1,120 @@
+.pricing {
+  padding: 80px 130px;
+
+  .title {
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .pricingTable {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      padding: 18px 20px;
+      text-align: center;
+      border: 1px solid #e7a06f;
+      font-size: 20px;
+    }
+
+    thead {
+      background: #de8436;
+      color: #fff;
+      font-weight: bold;
+
+      th:first-child {
+        width: 30%;
+      }
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fdf4ee;
+    }
+  }
+  .wrapper {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .title {
+    color: #d86928;
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .rows {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .box {
+    width: 300px;
+    padding: 25px 10px;
+    background: #fff;
+    border: 2px solid #e28a56;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    p {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .totalBox {
+    width: 300px;
+    padding: 25px 10px;
+    background: #d9752c;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    p {
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .plus {
+    font-size: 28px;
+    color: #d9752c;
+    font-weight: bold;
+  }
+
+  .arrow {
+    font-size: 28px;
+    color: #d9752c;
+    font-weight: bold;
+  }
+}
