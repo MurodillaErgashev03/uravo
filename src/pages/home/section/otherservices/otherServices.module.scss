@@ -1,0 +1,66 @@
+$orange-primary: #e67e22;
+$orange-light: #f39c12;
+$brown-dark: #8b4513;
+$brown-medium: #a0522d;
+$brown-light: #cd853f;
+$cream: #f5f0eb;
+$white: #ffffff;
+$text-dark: #333333;
+$text-muted: #666666;
+$text-title: #0d0b26;
+/* --- OTHER SERVICES SECTION --- */
+
+.otherServicesSection {
+   padding: 80px 0; // User Requirement: 80px top/bottom padding
+   background-color: $white;
+ }
+ 
+ .otherServicesContainer {
+   width: 100%;
+   max-width: 1160px; // User Requirement: 1160px container
+   margin: 0 auto;
+ }
+ 
+ .otherServicesTitle {
+   // Exact Font Styles Requested
+   font-family: "Noto Sans JP", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   font-size: 32px;
+   line-height: 160%;
+   letter-spacing: 0%;
+   text-align: center;
+   color: $text-dark;
+ 
+   margin-bottom: 40px; // User Requirement: 40px margin bottom
+ 
+   // Decorative dashed lines
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+ 
+   &::before,
+   &::after {
+     content: '';
+     display: block;
+     width: 30px;
+     height: 4px;
+     background-color: $text-dark;
+     border-radius: 2px;
+   }
+ }
+ 
+ .otherServicesContent {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+ }
+ 
+ .serviceImage {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   // Optional: Add a shadow/border if the image needs it to stand out
+   // box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+ }

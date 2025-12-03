@@ -105,10 +105,10 @@ $text-muted: #666666;
 }
 
 .pricingRow {
+  text-align: center;
   &:nth-child(even) {
     background-color: rgba($cream, 0.5);
   }
-  text-align: center;
 }
 
 .pricingLabel {

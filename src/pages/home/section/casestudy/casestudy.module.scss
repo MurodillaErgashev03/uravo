@@ -1,0 +1,129 @@
+$orange-primary: #e67e22;
+$orange-light: #f39c12;
+$brown-dark: #8b4513;
+$brown-medium: #a0522d;
+$brown-light: #cd853f;
+$cream: #f5f0eb;
+$white: #ffffff;
+$text-dark: #333333;
+$text-muted: #666666;
+$text-title: #0d0b26;
+
+.caseSection {
+  background-color: #f4f8f9; // Light background based on the image style
+  padding: 80px 20px;
+}
+
+.caseContainer {
+  width: 100%;
+  max-width: 1160px; // User Requirement
+  margin: 0 auto;
+}
+
+.caseTitle {
+  font-weight: 700;
+  font-style: normal; // "Bold" is covered by weight 700
+  font-size: 32px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $text-dark;
+
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: $text-dark;
+    border-radius: 2px;
+  }
+}
+
+.caseGrid {
+  display: grid;
+  grid-template-columns: 1fr; // Mobile default
+  gap: 20px;
+
+  // Desktop: 3 columns with 40px gap
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; // User Requirement
+  }
+}
+
+/* Card Styles */
+.caseCard {
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardImageHeader {
+  position: relative;
+}
+
+.placeholderImage {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  img {
+    border-radius: 5px;
+  }
+}
+
+.cardBody {
+  padding: 10px 10px 20px;
+  flex: 1;
+}
+
+.logoBadge {
+  display: inline-flex;
+  align-items: center;
+  border: 5px solid #4a9c99; // Greenish teal border
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $text-dark;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  background: $white;
+  gap: 6px;
+}
+
+.logoIcon {
+  color: #999;
+  font-weight: bold;
+}
+
+.companyName {
+  color: $text-title;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+
+.caseDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: $text-dark;
+  margin: 0;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}

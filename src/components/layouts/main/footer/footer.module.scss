@@ -1,0 +1,103 @@
+/* --- FOOTER SECTION --- */
+$orange-primary: #e67e22;
+$orange-light: #f39c12;
+$brown-dark: #8b4513;
+$brown-medium: #a0522d;
+$brown-light: #cd853f;
+$cream: #f5f0eb;
+$white: #ffffff;
+$text-dark: #333333;
+$text-muted: #666666;
+$text-title: #0d0b26;
+.footerSection {
+  background-color: #d8663a; // Matches your primary orange
+  color: $white;
+  padding: 80px 20px;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+
+  // Flex layout for the main content
+  display: flex;
+  flex-direction: column; // Stack on mobile
+  gap: 60px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  // User Requirement: Flexgap 80px between columns
+  gap: 40px;
+
+  @media (min-width: 1024px) {
+    gap: 80px;
+  }
+}
+
+.navColumn {
+  display: flex;
+  flex-direction: column;
+  // User Requirement: Each row 20px gap
+  gap: 20px;
+}
+
+.link {
+  color: $white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity 0.3s;
+  white-space: nowrap; // Prevents breaking text like "AI／クラウド"
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Brand Side (Right) */
+.brandSide {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 200px;
+
+  @media (min-width: 1024px) {
+    align-items: flex-end; // Align to right on desktop
+  }
+}
+
+.logoArea {
+  margin-bottom: 10px;
+}
+
+.logoText {
+  font-family: sans-serif; // Or your specific logo font
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 800;
+  color: $white;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.iconLink {
+  color: $white;
+  font-size: 24px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
